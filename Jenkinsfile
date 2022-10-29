@@ -7,7 +7,7 @@ pipeline {
                     checkout([$class: 'GitSCM', branches: [[name:'*/yacine']],
                         userRemoteConfigs: [[
                             url : 'https://github.com/Jassi-Yacine/CLivraison.git',
-                            credentialsId:'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'
+                            credentialsId:'e52eab6d-20e1-4494-b944-137c90e7409a'
                         ]]])
                 }
            
