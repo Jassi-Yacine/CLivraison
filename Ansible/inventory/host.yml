@@ -6,4 +6,4 @@ localhost
 [server:vars]
 ansible_python_interpreter= /usr/bin/python3
 ansi_user= yacine
-ansible_become_pass= yyyy
+ansible_sudo_pass='foobar'
