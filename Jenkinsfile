@@ -13,5 +13,11 @@ pipeline {
            
         }
         }
+
+          stage ('BUILD') {
+             steps {
+            sh 'ansible-playbook Ansible/build.yml -i Anisble/inventory/host.yml'
+        }
+        }
     }
 }
