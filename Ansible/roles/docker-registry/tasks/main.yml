@@ -1,12 +1,12 @@
 ---
 # tasks file for docker-registry
 - name: Log into DockerHub
-    docker_login:
-      username: yacine96
-      password: dckr_pat_7Jqr6qsH4oXqOrVrqNrzIiVqlN4
+  community.docker.docker_login:
+    username: yacine96
+    password: dckr_pat_7Jqr6qsH4oXqOrVrqNrzIiVqlN4
 - name: Tag and push to docker hub
-    community.docker.docker_image:
-      name: devops:latest
-      repository: yacine96/devops:latest
-      push: true
-      source: local
+  community.docker.docker_image:
+    name: devops:latest
+    repository: yacine96/devops:latest
+    push: true
+    source: local
