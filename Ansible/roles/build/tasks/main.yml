@@ -1,4 +1,4 @@
 ---
 # buildproject
 - name: build app
-  shell: ng build --prod
+  shell: npm install --legacy-peer-deps && ng build --configuration production
