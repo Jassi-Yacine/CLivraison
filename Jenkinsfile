@@ -19,5 +19,11 @@ pipeline {
             sh 'ansible-playbook Ansible/build.yml -i Anisble/inventory/host.yml'
         }
         }
+        
+        stage ('DOCKER') {
+             steps {
+            sh 'ansible-playbook Ansible/docker.yml -i Anisble/inventory/host.yml'
+        }
+        }
     }
 }
