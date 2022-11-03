@@ -1,7 +1,7 @@
 localhost ansible_connection=local
 
 [server]
-localhost ansible_user=root ansible_become_password=yyyy
+localhost ansible_user=yacine ansible_become_password=yyyy
 
 [server:vars]
 ansible_python_interpreter= /usr/bin/python3
