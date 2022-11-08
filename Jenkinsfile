@@ -31,5 +31,12 @@ pipeline {
             sh 'ansible-playbook Ansible/docker-registry.yml -i Anisble/inventory/host.yml'
         }
         }
+        
+        stage ('DEPLOY') {
+             steps {
+            sh 'kubectl create -f deployment.yml'
+            sh 'kubectl create -f service.yml'
+        }
+        }
     }
 }
