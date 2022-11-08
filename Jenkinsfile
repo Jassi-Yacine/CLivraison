@@ -34,6 +34,8 @@ pipeline {
         
         stage ('DEPLOY') {
              steps {
+            sh 'kubectl delete -n default deployment front'
+            sh 'kubectl delete -n default service front'
             sh 'kubectl create -f deployment.yml'
             sh 'kubectl create -f service.yml'
         }
