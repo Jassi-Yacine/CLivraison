@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+   name: front
+   namespace: default
+
+spec:
+   selector:
+      matchLabels:
+         app: front
+   replicas: 1
+
+   template:
+      metadata:
+         name: front
+         labels:
+            app: front
+
+      spec:
+         containers:
+            - name: front
+              image: 'yacine96/devops:latest'
+              imagePullPolicy: Always
